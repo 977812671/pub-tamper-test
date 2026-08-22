@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo-title
-        run: echo "Reviewing PR: ${{ github.event.pull_request.title }}"
+        run: |
+          echo "Reviewing PR title now"
+          echo "${{ github.event.pull_request.title }}"
       - name: checkout-head
         uses: actions/checkout@v4
         with:
